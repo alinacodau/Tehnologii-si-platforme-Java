@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:wave="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.raindrops.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        android:orientation="vertical"></LinearLayout>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#93dae8"
+        android:padding="10dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="3dp"
+        android:layout_above="@id/keyboard"
+        android:gravity="center"
+        android:alpha="0.8"
+        android:focusableInTouchMode="false" />
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editText"
+            android:layout_alignBottom="@+id/editText"
+            android:layout_alignRight="@+id/editText"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/rotated_icon"/>
+
+    <com.john.waveview.WaveView
+        android:id="@+id/wave_view"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        wave:above_wave_color="@android:color/holo_red_light"
+        wave:blow_wave_color="@android:color/white"
+        wave:progress="100"
+        wave:wave_height="large"
+        wave:wave_hz="normal"
+        wave:wave_length="large"
+        />
+
+    <com.example.raindrops.MyKeyboard
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
